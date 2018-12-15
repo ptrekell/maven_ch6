@@ -1,4 +1,4 @@
 .idea
 
-/simple-weather/target/
-/simple-webapp/target/
+/simple-weather/target/*
+/simple-webapp/target/*
