@@ -1,0 +1,204 @@
+2018-12-14 17:20:39,166 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-14 17:20:39,166 - Velocity was not initialized! Calling init()...
+2018-12-14 17:20:39,166 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2018-12-14 17:20:39,166 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-14 17:20:39,167 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-14 17:20:39,167 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:993)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:972)
+	at org.apache.velocity.runtime.RuntimeSingleton.parse(RuntimeSingleton.java:265)
+	at org.apache.velocity.app.Velocity.evaluate(Velocity.java:274)
+	at org.sonatype.mavenbook.weather.WeatherFormatter.format(WeatherFormatter.java:21)
+	at org.sonatype.mavenbook.weather.WeatherService.retrieveForecast(WeatherService.java:17)
+	at org.sonatype.mavenbook.web.WeatherServlet.doGet(WeatherServlet.java:19)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:401)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:363)
+	... 34 more
+2018-12-14 17:20:39,169 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:20:39,169 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:20:39,170 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2018-12-14 17:20:39,172 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2018-12-14 17:20:39,173 - Do unicode file recognition:  false
+2018-12-14 17:20:39,173 - FileResourceLoader : adding path '.'
+2018-12-14 17:20:39,181 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2018-12-14 17:20:39,181 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-14 17:20:39,182 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-14 17:20:39,183 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-14 17:20:39,183 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-14 17:20:39,184 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-14 17:20:39,202 - Created '20' parsers.
+2018-12-14 17:20:39,207 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-14 17:20:39,207 - Velocimacro : Default library not found.
+2018-12-14 17:20:39,207 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-14 17:20:39,207 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-14 17:20:39,207 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-14 17:20:39,207 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-14 17:23:25,387 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-14 17:23:25,387 - Velocity was not initialized! Calling init()...
+2018-12-14 17:23:25,387 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2018-12-14 17:23:25,387 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-14 17:23:25,387 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-14 17:23:25,388 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:993)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:972)
+	at org.apache.velocity.runtime.RuntimeSingleton.parse(RuntimeSingleton.java:265)
+	at org.apache.velocity.app.Velocity.evaluate(Velocity.java:274)
+	at org.sonatype.mavenbook.weather.WeatherFormatter.format(WeatherFormatter.java:21)
+	at org.sonatype.mavenbook.weather.WeatherService.retrieveForecast(WeatherService.java:17)
+	at org.sonatype.mavenbook.web.WeatherServlet.doGet(WeatherServlet.java:20)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:401)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:363)
+	... 34 more
+2018-12-14 17:23:25,389 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:23:25,389 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:23:25,390 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2018-12-14 17:23:25,392 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2018-12-14 17:23:25,393 - Do unicode file recognition:  false
+2018-12-14 17:23:25,393 - FileResourceLoader : adding path '.'
+2018-12-14 17:23:25,402 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2018-12-14 17:23:25,403 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-14 17:23:25,404 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-14 17:23:25,405 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-14 17:23:25,405 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-14 17:23:25,406 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-14 17:23:25,423 - Created '20' parsers.
+2018-12-14 17:23:25,427 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-14 17:23:25,427 - Velocimacro : Default library not found.
+2018-12-14 17:23:25,427 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-14 17:23:25,427 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-14 17:23:25,427 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-14 17:23:25,427 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-14 17:25:06,885 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-14 17:25:06,885 - Velocity was not initialized! Calling init()...
+2018-12-14 17:25:06,885 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2018-12-14 17:25:06,885 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-14 17:25:06,885 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-14 17:25:06,886 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:993)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:972)
+	at org.apache.velocity.runtime.RuntimeSingleton.parse(RuntimeSingleton.java:265)
+	at org.apache.velocity.app.Velocity.evaluate(Velocity.java:274)
+	at org.sonatype.mavenbook.weather.WeatherFormatter.format(WeatherFormatter.java:21)
+	at org.sonatype.mavenbook.weather.WeatherService.retrieveForecast(WeatherService.java:17)
+	at org.sonatype.mavenbook.web.WeatherServlet.doGet(WeatherServlet.java:21)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:401)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:363)
+	... 34 more
+2018-12-14 17:25:06,887 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:25:06,887 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-14 17:25:06,888 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2018-12-14 17:25:06,890 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2018-12-14 17:25:06,891 - Do unicode file recognition:  false
+2018-12-14 17:25:06,891 - FileResourceLoader : adding path '.'
+2018-12-14 17:25:06,899 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2018-12-14 17:25:06,900 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-14 17:25:06,901 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-14 17:25:06,901 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-14 17:25:06,902 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-14 17:25:06,903 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-14 17:25:06,922 - Created '20' parsers.
+2018-12-14 17:25:06,926 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-14 17:25:06,926 - Velocimacro : Default library not found.
+2018-12-14 17:25:06,926 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-14 17:25:06,926 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-14 17:25:06,927 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-14 17:25:06,927 - Velocimacro : autoload off : VM system will not automatically reload global library macros
